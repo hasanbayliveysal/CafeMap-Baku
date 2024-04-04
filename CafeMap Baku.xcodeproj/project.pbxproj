@@ -1,0 +1,487 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE5A07C82BBED9C60028BF74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A07C72BBED9C60028BF74 /* AppDelegate.swift */; };
+		CE5A07CC2BBED9C60028BF74 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A07CB2BBED9C60028BF74 /* MainViewController.swift */; };
+		CE5A07D12BBED9C70028BF74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5A07D02BBED9C70028BF74 /* Assets.xcassets */; };
+		CE5A07D42BBED9C70028BF74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5A07D22BBED9C70028BF74 /* LaunchScreen.storyboard */; };
+		CE5A07DC2BBEDC6F0028BF74 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A07DB2BBEDC6F0028BF74 /* Router.swift */; };
+		CE5A07DE2BBEDE490028BF74 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A07DD2BBEDE490028BF74 /* BaseViewController.swift */; };
+		CE5A07E92BBEE5680028BF74 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE5A07E82BBEE5680028BF74 /* SnapKit */; };
+		CE5A07F12BBEE7F50028BF74 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CE5A07F02BBEE7F50028BF74 /* RealmSwift */; };
+		CE5A07F32BBEE83A0028BF74 /* MainViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A07F22BBEE83A0028BF74 /* MainViewVM.swift */; };
+		CE5A07F72BBEEB090028BF74 /* CafeObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A07F62BBEEB090028BF74 /* CafeObject.swift */; };
+		CE5A07F92BBEEBA40028BF74 /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A07F82BBEEBA40028BF74 /* DataBaseManager.swift */; };
+		CE5A07FB2BBEF0610028BF74 /* bakucafes.json in Resources */ = {isa = PBXBuildFile; fileRef = CE5A07FA2BBEF0610028BF74 /* bakucafes.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CE5A07C42BBED9C60028BF74 /* CafeMap Baku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CafeMap Baku.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE5A07C72BBED9C60028BF74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE5A07CB2BBED9C60028BF74 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CE5A07D02BBED9C70028BF74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE5A07D32BBED9C70028BF74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CE5A07D52BBED9C70028BF74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE5A07DB2BBEDC6F0028BF74 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		CE5A07DD2BBEDE490028BF74 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		CE5A07F22BBEE83A0028BF74 /* MainViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewVM.swift; sourceTree = "<group>"; };
+		CE5A07F62BBEEB090028BF74 /* CafeObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeObject.swift; sourceTree = "<group>"; };
+		CE5A07F82BBEEBA40028BF74 /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
+		CE5A07FA2BBEF0610028BF74 /* bakucafes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = bakucafes.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE5A07C12BBED9C60028BF74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE5A07F12BBEE7F50028BF74 /* RealmSwift in Frameworks */,
+				CE5A07E92BBEE5680028BF74 /* SnapKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE5A07BB2BBED9C50028BF74 = {
+			isa = PBXGroup;
+			children = (
+				CE5A07C62BBED9C60028BF74 /* CafeMap Baku */,
+				CE5A07C52BBED9C60028BF74 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE5A07C52BBED9C60028BF74 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE5A07C42BBED9C60028BF74 /* CafeMap Baku.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE5A07C62BBED9C60028BF74 /* CafeMap Baku */ = {
+			isa = PBXGroup;
+			children = (
+				CE5A07F52BBEEAD90028BF74 /* DataBaseConfiguration */,
+				CE5A07E32BBEDEFF0028BF74 /* Model */,
+				CE5A07DF2BBEDEA80028BF74 /* View */,
+				CE5A07E22BBEDEF60028BF74 /* ViewModel */,
+				CE5A07E42BBEDF170028BF74 /* Extensions */,
+				CE5A07E12BBEDEE60028BF74 /* Router */,
+				CE5A07E52BBEDF300028BF74 /* AppDelegate */,
+				CE5A07D02BBED9C70028BF74 /* Assets.xcassets */,
+				CE5A07D22BBED9C70028BF74 /* LaunchScreen.storyboard */,
+				CE5A07D52BBED9C70028BF74 /* Info.plist */,
+				CE5A07FA2BBEF0610028BF74 /* bakucafes.json */,
+			);
+			path = "CafeMap Baku";
+			sourceTree = "<group>";
+		};
+		CE5A07DF2BBEDEA80028BF74 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE5A07E62BBEDF520028BF74 /* BaseViewController */,
+				CE5A07E02BBEDEB60028BF74 /* MainViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE5A07E02BBEDEB60028BF74 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE5A07CB2BBED9C60028BF74 /* MainViewController.swift */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		CE5A07E12BBEDEE60028BF74 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				CE5A07DB2BBEDC6F0028BF74 /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		CE5A07E22BBEDEF60028BF74 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE5A07F22BBEE83A0028BF74 /* MainViewVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CE5A07E32BBEDEFF0028BF74 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE5A07E42BBEDF170028BF74 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CE5A07E52BBEDF300028BF74 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				CE5A07C72BBED9C60028BF74 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		CE5A07E62BBEDF520028BF74 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE5A07DD2BBEDE490028BF74 /* BaseViewController.swift */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		CE5A07F52BBEEAD90028BF74 /* DataBaseConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				CE5A07F62BBEEB090028BF74 /* CafeObject.swift */,
+				CE5A07F82BBEEBA40028BF74 /* DataBaseManager.swift */,
+			);
+			path = DataBaseConfiguration;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE5A07C32BBED9C60028BF74 /* CafeMap Baku */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE5A07D82BBED9C70028BF74 /* Build configuration list for PBXNativeTarget "CafeMap Baku" */;
+			buildPhases = (
+				CE5A07C02BBED9C60028BF74 /* Sources */,
+				CE5A07C12BBED9C60028BF74 /* Frameworks */,
+				CE5A07C22BBED9C60028BF74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CafeMap Baku";
+			packageProductDependencies = (
+				CE5A07E82BBEE5680028BF74 /* SnapKit */,
+				CE5A07F02BBEE7F50028BF74 /* RealmSwift */,
+			);
+			productName = "CafeMap Baku";
+			productReference = CE5A07C42BBED9C60028BF74 /* CafeMap Baku.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE5A07BC2BBED9C50028BF74 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					CE5A07C32BBED9C60028BF74 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = CE5A07BF2BBED9C50028BF74 /* Build configuration list for PBXProject "CafeMap Baku" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE5A07BB2BBED9C50028BF74;
+			packageReferences = (
+				CE5A07E72BBEE5680028BF74 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				CE5A07EF2BBEE7F50028BF74 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
+			productRefGroup = CE5A07C52BBED9C60028BF74 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE5A07C32BBED9C60028BF74 /* CafeMap Baku */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE5A07C22BBED9C60028BF74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE5A07FB2BBEF0610028BF74 /* bakucafes.json in Resources */,
+				CE5A07D42BBED9C70028BF74 /* LaunchScreen.storyboard in Resources */,
+				CE5A07D12BBED9C70028BF74 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE5A07C02BBED9C60028BF74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE5A07CC2BBED9C60028BF74 /* MainViewController.swift in Sources */,
+				CE5A07DE2BBEDE490028BF74 /* BaseViewController.swift in Sources */,
+				CE5A07DC2BBEDC6F0028BF74 /* Router.swift in Sources */,
+				CE5A07F72BBEEB090028BF74 /* CafeObject.swift in Sources */,
+				CE5A07F92BBEEBA40028BF74 /* DataBaseManager.swift in Sources */,
+				CE5A07C82BBED9C60028BF74 /* AppDelegate.swift in Sources */,
+				CE5A07F32BBEE83A0028BF74 /* MainViewVM.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CE5A07D22BBED9C70028BF74 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE5A07D32BBED9C70028BF74 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE5A07D62BBED9C70028BF74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CE5A07D72BBED9C70028BF74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE5A07D92BBED9C70028BF74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V893D9G2H6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CafeMap Baku/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hasanbayliveysal.CafeMap-Baku";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE5A07DA2BBED9C70028BF74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V893D9G2H6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CafeMap Baku/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hasanbayliveysal.CafeMap-Baku";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE5A07BF2BBED9C50028BF74 /* Build configuration list for PBXProject "CafeMap Baku" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE5A07D62BBED9C70028BF74 /* Debug */,
+				CE5A07D72BBED9C70028BF74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE5A07D82BBED9C70028BF74 /* Build configuration list for PBXNativeTarget "CafeMap Baku" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE5A07D92BBED9C70028BF74 /* Debug */,
+				CE5A07DA2BBED9C70028BF74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE5A07E72BBEE5680028BF74 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		CE5A07EF2BBEE7F50028BF74 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE5A07E82BBEE5680028BF74 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE5A07E72BBEE5680028BF74 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		CE5A07F02BBEE7F50028BF74 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE5A07EF2BBEE7F50028BF74 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = CE5A07BC2BBED9C50028BF74 /* Project object */;
+}

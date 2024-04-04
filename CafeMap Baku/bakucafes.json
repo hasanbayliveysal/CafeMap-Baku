@@ -1,0 +1,25 @@
+
+
+
+    [
+        {
+            "name": "ADA RESTAURANT",
+            "location": "Şıxov qəs., Salyan şossesi 14",
+            "desc": "Ən yaxşılarından biri! ",
+            "websiteUrl": ""
+        },
+        {
+            "name": "ADANALI",
+            "location": "Nizami r-nu, Məmmədəli Şərifli 25",
+            "desc": "Ən yaxşılarından biri! ",
+            "websiteUrl": ""
+        },
+        {
+            "name": "MC'Donalds",
+            "location": "340 Nizami St, Baku 1005",
+            "desc": "Ən yaxşılarından biri! ",
+            "websiteUrl": "https://mcdonalds.az/"
+        }
+    ]
+
+
