@@ -37,6 +37,7 @@ class MainViewController: BaseViewController<MainViewVM> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        vm.writeData()
         setupConstraint()
     }
 
@@ -64,7 +65,7 @@ extension MainViewController {
         case "Restaurants List":
             navigationController?.pushViewController(router.cafeListVC(), animated: true)
         case "Restaurants On The Map":
-            navigationController?.pushViewController(router.cafeListVC(), animated: true)
+            navigationController?.pushViewController(router.mapVC(), animated: true)
         default:
             break
         }

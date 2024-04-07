@@ -13,7 +13,7 @@ class CafeListViewController: BaseViewController<CafeListVM> {
         tableView.dataSource = vm
         tableView.delegate   = vm
         tableView.register(TitleSubtitleTableViewCell.self, forCellReuseIdentifier: TitleSubtitleTableViewCell.identifier)
-       return tableView
+        return tableView
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +31,9 @@ extension CafeListViewController {
         vm.writeData()
         vm.didSelectRowAt = { [weak self] cafe in
             let vc = self?.router.detailsVC() as! DetailsViewController
-            vc.descLabel.text = cafe.desc
-            self?.present(vc, animated: true)
+            vc.cafeItem = cafe
+            self?.navigationController?.pushViewController(vc, animated: true)
+            
         }
         let addNewCafeButton = UIBarButtonItem(image: .add, style: .plain, target: self, action: #selector(didTapAddNewCafe))
         navigationItem.rightBarButtonItem = addNewCafeButton
@@ -45,6 +46,6 @@ extension CafeListViewController {
     }
     @objc
     func didTapAddNewCafe() {
-         navigationController?.pushViewController(router.addNewVC(), animated: true) 
+        navigationController?.pushViewController(router.addNewVC(), animated: true)
     }
 }

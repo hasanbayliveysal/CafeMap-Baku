@@ -23,6 +23,8 @@
 		CE5A08002BBF1A890028BF74 /* CafeListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A07FF2BBF1A890028BF74 /* CafeListVM.swift */; };
 		CE5A08022BBF1F8C0028BF74 /* TitleSubtitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A08012BBF1F8C0028BF74 /* TitleSubtitleTableViewCell.swift */; };
 		CE5A08042BBF1FE10028BF74 /* UITableViewCell+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A08032BBF1FE10028BF74 /* UITableViewCell+Ex.swift */; };
+		FC66AAC82BC2CFAA0076AE10 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC66AAC72BC2CFAA0076AE10 /* MapViewController.swift */; };
+		FC66AACA2BC2D12E0076AE10 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC66AAC92BC2D12E0076AE10 /* MapViewModel.swift */; };
 		FC9E3A162BC02D940010A661 /* DetailsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9E3A152BC02D940010A661 /* DetailsVM.swift */; };
 		FC9E3A182BC02DC00010A661 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9E3A172BC02DC00010A661 /* DetailsViewController.swift */; };
 		FC9E3A1B2BC234600010A661 /* MainViewCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9E3A1A2BC234600010A661 /* MainViewCustomButton.swift */; };
@@ -51,6 +53,8 @@
 		CE5A07FF2BBF1A890028BF74 /* CafeListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeListVM.swift; sourceTree = "<group>"; };
 		CE5A08012BBF1F8C0028BF74 /* TitleSubtitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSubtitleTableViewCell.swift; sourceTree = "<group>"; };
 		CE5A08032BBF1FE10028BF74 /* UITableViewCell+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Ex.swift"; sourceTree = "<group>"; };
+		FC66AAC72BC2CFAA0076AE10 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		FC66AAC92BC2D12E0076AE10 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		FC9E3A152BC02D940010A661 /* DetailsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVM.swift; sourceTree = "<group>"; };
 		FC9E3A172BC02DC00010A661 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		FC9E3A1A2BC234600010A661 /* MainViewCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCustomButton.swift; sourceTree = "<group>"; };
@@ -115,6 +119,7 @@
 				CE5A07E62BBEDF520028BF74 /* BaseViewController */,
 				CE5A07E02BBEDEB60028BF74 /* MainViewController */,
 				CE5A07FC2BBF1A3C0028BF74 /* CafeListViewController */,
+				FC66AAC62BC2CF790076AE10 /* MapViewController */,
 				FC9E3A212BC2535D0010A661 /* CustomCell */,
 			);
 			path = View;
@@ -145,6 +150,7 @@
 				FC9E3A152BC02D940010A661 /* DetailsVM.swift */,
 				FC9E3A1F2BC23E1A0010A661 /* AddNewCafeVM.swift */,
 				FC9E3A2B2BC25B190010A661 /* SearchVM.swift */,
+				FC66AAC92BC2D12E0076AE10 /* MapViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -197,6 +203,14 @@
 				FC9E3A1C2BC23DAA0010A661 /* AddNewViewController */,
 			);
 			path = CafeListViewController;
+			sourceTree = "<group>";
+		};
+		FC66AAC62BC2CF790076AE10 /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FC66AAC72BC2CFAA0076AE10 /* MapViewController.swift */,
+			);
+			path = MapViewController;
 			sourceTree = "<group>";
 		};
 		FC9E3A142BC02D770010A661 /* DetailsViewController */ = {
@@ -351,9 +365,11 @@
 				CE5A07C82BBED9C60028BF74 /* AppDelegate.swift in Sources */,
 				CE5A08002BBF1A890028BF74 /* CafeListVM.swift in Sources */,
 				CE5A08022BBF1F8C0028BF74 /* TitleSubtitleTableViewCell.swift in Sources */,
+				FC66AAC82BC2CFAA0076AE10 /* MapViewController.swift in Sources */,
 				FC9E3A2C2BC25B190010A661 /* SearchVM.swift in Sources */,
 				FC9E3A1E2BC23DE50010A661 /* AddNewViewController.swift in Sources */,
 				FC9E3A1B2BC234600010A661 /* MainViewCustomButton.swift in Sources */,
+				FC66AACA2BC2D12E0076AE10 /* MapViewModel.swift in Sources */,
 				FC9E3A2F2BC262DF0010A661 /* SearchViewControllerDelegate.swift in Sources */,
 				CE5A07F32BBEE83A0028BF74 /* MainViewVM.swift in Sources */,
 				FC9E3A182BC02DC00010A661 /* DetailsViewController.swift in Sources */,

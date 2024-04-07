@@ -10,10 +10,9 @@ class CafeListVM: NSObject{
    
     func writeData() {
         DataBaseManager.shared.writeDataToRealm()
-        DataBaseManager.shared.writeCustomCafeToRealm(with: Cafe(name: "Qayali Restaurant", location: "Quba Qechresh", desc: "this is the burger", websiteUrl: "mc.az"))
     }
     func fetchData() -> [Cafe] {
-        return DataBaseManager.shared.loadDataFromRealm() 
+        return DataBaseManager.shared.loadDataFromRealm().reversed()
     }
     var didSelectRowAt: ((Cafe)->())? = nil
     

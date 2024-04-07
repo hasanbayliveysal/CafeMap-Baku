@@ -13,6 +13,7 @@ protocol RouterProtocol {
     func detailsVC () -> UIViewController
     func addNewVC () -> UIViewController
     func searchVC() -> UIViewController
+    func mapVC() -> UIViewController
 }
 
 class Router: RouterProtocol {
@@ -30,5 +31,8 @@ class Router: RouterProtocol {
     }
     func searchVC() -> UIViewController {
         return SearchViewController(vm: SearchVM(), router: self)
+    }
+    func mapVC() -> UIViewController {
+        return MapViewController(vm: MapViewModel(), router: self)
     }
 }

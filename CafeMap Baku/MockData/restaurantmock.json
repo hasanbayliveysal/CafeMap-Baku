@@ -1,25 +1,42 @@
 
-
-
-    [
-        {
-            "name": "ADA RESTAURANT",
-            "location": "Şıxov qəs., Salyan şossesi 14",
-            "desc": "Ən yaxşılarından biri! ",
-            "websiteUrl": ""
-        },
-        {
-            "name": "ADANALI",
-            "location": "Nizami r-nu, Məmmədəli Şərifli 25",
-            "desc": "Ən yaxşılarından biri! ",
-            "websiteUrl": ""
-        },
-        {
-            "name": "MC'Donalds",
-            "location": "340 Nizami St, Baku 1005",
-            "desc": "Ən yaxşılarından biri! ",
-            "websiteUrl": "https://mcdonalds.az/"
-        }
-    ]
+[
+    {
+        "name": "McDonald's 28 Mall",
+        "locationName": "27 Azadliq Ave, Baku 1000, Azerbaijan",
+        "locationCoordinateLatitude": 40.3740359,
+        "locationCoordinateLongitude": 49.8290512,
+        "desc": "Biz keyfiyyətə sadiq qalırıq",
+        "websiteUrl": "https://mcdonalds.az/"
+    },
+    {
+        "name": "Papa John's Əhmədli",
+        "locationName": "106 Məhəmməd Hadi küçəsi, Baku 1001",
+        "locationCoordinateLatitude": 40.3893116,
+        "locationCoordinateLongitude": 49.8008714,
+        "desc": "Klasik ve özel pizzalar",
+        "websiteUrl": "https://www.papajohns.az/az/"
+    },
+    {
+        "name": "AL DIVAN",
+        "locationName": "340 Nizami St, Baku 1005",
+        "locationCoordinateLatitude": 40.374016,
+        "locationCoordinateLongitude": 49.836776,
+        "desc": "Bakı şəhərinin mərkəzində ərəb və hind restoranı"
+    },
+    {
+        "name": "ADA RESTAURANT",
+        "locationName": "Şıxov qəs., Salyan şossesi 14",
+        "locationCoordinateLatitude": 40.301292,
+        "locationCoordinateLongitude": 49.779042,
+        "desc": "Hər zaman rahat və ləzzətli təamların olduğu məkan..."
+    },
+    {
+        "name": "ADANALI",
+        "locationName": "Nizami r-nu, Məmmədəli Şərifli 25",
+        "locationCoordinateLatitude": 40.414278,
+        "locationCoordinateLongitude": 49.948673,
+        "desc": "Milli və türk mətbəxi"
+    }
+]
 
 

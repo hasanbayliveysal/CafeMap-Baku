@@ -9,6 +9,7 @@ import UIKit
 import MapKit
 
 class AddNewViewController: BaseViewController<AddNewCafeVM> {
+    private var cafeLocationCoordinate: CLLocationCoordinate2D? = nil
     private var nameTextFieldView: CustomTextFieldView = {
         var view = CustomTextFieldView()
         view.customTF.placeholder = "Restaurant name"
@@ -87,12 +88,18 @@ extension AddNewViewController {
     func didTapSaveButton() {
         guard let name = nameTextFieldView.customTF.text, !name.isEmpty,
               let description = descTextFieldView.customTF.text, !description.isEmpty,
-              let websiteUrl = webSiteTextFieldView.customTF.text, !websiteUrl.isEmpty
-             // let locationName = locationTextFieldView.customTF.text, !locationName.isEmpty
+              let websiteUrl = webSiteTextFieldView.customTF.text, !websiteUrl.isEmpty,
+              let locationName = locationTextFieldView.customTF.text, !locationName.isEmpty,
+              let locationCoordinate = cafeLocationCoordinate
         else {
             return
         }
-        let myItem = Cafe(name: name, location: "Quba", desc: description, websiteUrl: websiteUrl)
+        let myItem = Cafe(
+            name: name,
+            locationName: locationName,
+            locationCoordinate: locationCoordinate,
+            desc: description,
+            websiteUrl: websiteUrl)
         vm.saveNewCafe(with: myItem)
         navigationController?.popViewController(animated: true)
     }
@@ -100,6 +107,7 @@ extension AddNewViewController {
 
 extension AddNewViewController: SearchViewControllerDelegate {
     func didSelectSearchedLocation(cafeName: String, cafeLocation: CLLocationCoordinate2D) {
-        print("here")
+        locationTextFieldView.customTF.text = cafeName
+        cafeLocationCoordinate = cafeLocation
     }
 }

@@ -38,7 +38,7 @@ class TitleSubtitleTableViewCell: UITableViewCell {
     
     func configureWihtRestaurant(with model: Cafe) {
         nameLabel.text = model.name
-        locationLabel.text = model.location
+        locationLabel.text = model.locationName
     }
     
     func configureWihtSearchItems(with list: MKMapItem) {

@@ -15,17 +15,7 @@ class MainViewVM {
         }
         return image
     }
-//    func writeData() {
-//        DataBaseManager.shared.writeDataToRealm()
-//    }
-//    func fetchData() {
-//        let cafes = DataBaseManager.shared.loadDataFromRealm()
-//        for cafe in cafes {
-//            print(cafe.name, cafe.desc)
-//        }
-//    }
-//
-//    func updateCafeDescription(with cafeName: String, and description: String) {
-//        DataBaseManager.shared.updateDescription(with: cafeName, and: description)
-//    }
+    func writeData() {
+        DataBaseManager.shared.writeDataToRealm()
+    }
 }
