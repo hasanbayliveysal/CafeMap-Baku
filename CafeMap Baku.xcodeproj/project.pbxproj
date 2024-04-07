@@ -18,7 +18,20 @@
 		CE5A07F32BBEE83A0028BF74 /* MainViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A07F22BBEE83A0028BF74 /* MainViewVM.swift */; };
 		CE5A07F72BBEEB090028BF74 /* CafeObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A07F62BBEEB090028BF74 /* CafeObject.swift */; };
 		CE5A07F92BBEEBA40028BF74 /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A07F82BBEEBA40028BF74 /* DataBaseManager.swift */; };
-		CE5A07FB2BBEF0610028BF74 /* bakucafes.json in Resources */ = {isa = PBXBuildFile; fileRef = CE5A07FA2BBEF0610028BF74 /* bakucafes.json */; };
+		CE5A07FB2BBEF0610028BF74 /* restaurantmock.json in Resources */ = {isa = PBXBuildFile; fileRef = CE5A07FA2BBEF0610028BF74 /* restaurantmock.json */; };
+		CE5A07FE2BBF1A5B0028BF74 /* CafeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A07FD2BBF1A5B0028BF74 /* CafeListViewController.swift */; };
+		CE5A08002BBF1A890028BF74 /* CafeListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A07FF2BBF1A890028BF74 /* CafeListVM.swift */; };
+		CE5A08022BBF1F8C0028BF74 /* TitleSubtitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A08012BBF1F8C0028BF74 /* TitleSubtitleTableViewCell.swift */; };
+		CE5A08042BBF1FE10028BF74 /* UITableViewCell+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A08032BBF1FE10028BF74 /* UITableViewCell+Ex.swift */; };
+		FC9E3A162BC02D940010A661 /* DetailsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9E3A152BC02D940010A661 /* DetailsVM.swift */; };
+		FC9E3A182BC02DC00010A661 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9E3A172BC02DC00010A661 /* DetailsViewController.swift */; };
+		FC9E3A1B2BC234600010A661 /* MainViewCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9E3A1A2BC234600010A661 /* MainViewCustomButton.swift */; };
+		FC9E3A1E2BC23DE50010A661 /* AddNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9E3A1D2BC23DE50010A661 /* AddNewViewController.swift */; };
+		FC9E3A202BC23E1A0010A661 /* AddNewCafeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9E3A1F2BC23E1A0010A661 /* AddNewCafeVM.swift */; };
+		FC9E3A2A2BC25AF70010A661 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9E3A292BC25AF70010A661 /* SearchViewController.swift */; };
+		FC9E3A2C2BC25B190010A661 /* SearchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9E3A2B2BC25B190010A661 /* SearchVM.swift */; };
+		FC9E3A2F2BC262DF0010A661 /* SearchViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9E3A2E2BC262DF0010A661 /* SearchViewControllerDelegate.swift */; };
+		FC9E3A822BC2ABB90010A661 /* CustomViewForTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9E3A812BC2ABB90010A661 /* CustomViewForTF.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +46,20 @@
 		CE5A07F22BBEE83A0028BF74 /* MainViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewVM.swift; sourceTree = "<group>"; };
 		CE5A07F62BBEEB090028BF74 /* CafeObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeObject.swift; sourceTree = "<group>"; };
 		CE5A07F82BBEEBA40028BF74 /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
-		CE5A07FA2BBEF0610028BF74 /* bakucafes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = bakucafes.json; sourceTree = "<group>"; };
+		CE5A07FA2BBEF0610028BF74 /* restaurantmock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = restaurantmock.json; sourceTree = "<group>"; };
+		CE5A07FD2BBF1A5B0028BF74 /* CafeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeListViewController.swift; sourceTree = "<group>"; };
+		CE5A07FF2BBF1A890028BF74 /* CafeListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeListVM.swift; sourceTree = "<group>"; };
+		CE5A08012BBF1F8C0028BF74 /* TitleSubtitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSubtitleTableViewCell.swift; sourceTree = "<group>"; };
+		CE5A08032BBF1FE10028BF74 /* UITableViewCell+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Ex.swift"; sourceTree = "<group>"; };
+		FC9E3A152BC02D940010A661 /* DetailsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVM.swift; sourceTree = "<group>"; };
+		FC9E3A172BC02DC00010A661 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		FC9E3A1A2BC234600010A661 /* MainViewCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCustomButton.swift; sourceTree = "<group>"; };
+		FC9E3A1D2BC23DE50010A661 /* AddNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewViewController.swift; sourceTree = "<group>"; };
+		FC9E3A1F2BC23E1A0010A661 /* AddNewCafeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCafeVM.swift; sourceTree = "<group>"; };
+		FC9E3A292BC25AF70010A661 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		FC9E3A2B2BC25B190010A661 /* SearchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVM.swift; sourceTree = "<group>"; };
+		FC9E3A2E2BC262DF0010A661 /* SearchViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerDelegate.swift; sourceTree = "<group>"; };
+		FC9E3A812BC2ABB90010A661 /* CustomViewForTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewForTF.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +94,7 @@
 		CE5A07C62BBED9C60028BF74 /* CafeMap Baku */ = {
 			isa = PBXGroup;
 			children = (
+				FC9E3A192BC05BD90010A661 /* MockData */,
 				CE5A07F52BBEEAD90028BF74 /* DataBaseConfiguration */,
 				CE5A07E32BBEDEFF0028BF74 /* Model */,
 				CE5A07DF2BBEDEA80028BF74 /* View */,
@@ -78,7 +105,6 @@
 				CE5A07D02BBED9C70028BF74 /* Assets.xcassets */,
 				CE5A07D22BBED9C70028BF74 /* LaunchScreen.storyboard */,
 				CE5A07D52BBED9C70028BF74 /* Info.plist */,
-				CE5A07FA2BBEF0610028BF74 /* bakucafes.json */,
 			);
 			path = "CafeMap Baku";
 			sourceTree = "<group>";
@@ -88,6 +114,8 @@
 			children = (
 				CE5A07E62BBEDF520028BF74 /* BaseViewController */,
 				CE5A07E02BBEDEB60028BF74 /* MainViewController */,
+				CE5A07FC2BBF1A3C0028BF74 /* CafeListViewController */,
+				FC9E3A212BC2535D0010A661 /* CustomCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -96,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				CE5A07CB2BBED9C60028BF74 /* MainViewController.swift */,
+				FC9E3A1A2BC234600010A661 /* MainViewCustomButton.swift */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -112,6 +141,10 @@
 			isa = PBXGroup;
 			children = (
 				CE5A07F22BBEE83A0028BF74 /* MainViewVM.swift */,
+				CE5A07FF2BBF1A890028BF74 /* CafeListVM.swift */,
+				FC9E3A152BC02D940010A661 /* DetailsVM.swift */,
+				FC9E3A1F2BC23E1A0010A661 /* AddNewCafeVM.swift */,
+				FC9E3A2B2BC25B190010A661 /* SearchVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -126,6 +159,7 @@
 		CE5A07E42BBEDF170028BF74 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				CE5A08032BBF1FE10028BF74 /* UITableViewCell+Ex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -153,6 +187,75 @@
 				CE5A07F82BBEEBA40028BF74 /* DataBaseManager.swift */,
 			);
 			path = DataBaseConfiguration;
+			sourceTree = "<group>";
+		};
+		CE5A07FC2BBF1A3C0028BF74 /* CafeListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE5A07FD2BBF1A5B0028BF74 /* CafeListViewController.swift */,
+				FC9E3A142BC02D770010A661 /* DetailsViewController */,
+				FC9E3A1C2BC23DAA0010A661 /* AddNewViewController */,
+			);
+			path = CafeListViewController;
+			sourceTree = "<group>";
+		};
+		FC9E3A142BC02D770010A661 /* DetailsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FC9E3A172BC02DC00010A661 /* DetailsViewController.swift */,
+			);
+			path = DetailsViewController;
+			sourceTree = "<group>";
+		};
+		FC9E3A192BC05BD90010A661 /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				CE5A07FA2BBEF0610028BF74 /* restaurantmock.json */,
+			);
+			path = MockData;
+			sourceTree = "<group>";
+		};
+		FC9E3A1C2BC23DAA0010A661 /* AddNewViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FC9E3A1D2BC23DE50010A661 /* AddNewViewController.swift */,
+				FC9E3A832BC2AF570010A661 /* CustomView */,
+				FC9E3A282BC25AD60010A661 /* SearchViewController */,
+			);
+			path = AddNewViewController;
+			sourceTree = "<group>";
+		};
+		FC9E3A212BC2535D0010A661 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				CE5A08012BBF1F8C0028BF74 /* TitleSubtitleTableViewCell.swift */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		FC9E3A282BC25AD60010A661 /* SearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FC9E3A292BC25AF70010A661 /* SearchViewController.swift */,
+				FC9E3A2D2BC262C80010A661 /* Delegate */,
+			);
+			path = SearchViewController;
+			sourceTree = "<group>";
+		};
+		FC9E3A2D2BC262C80010A661 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				FC9E3A2E2BC262DF0010A661 /* SearchViewControllerDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		FC9E3A832BC2AF570010A661 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				FC9E3A812BC2ABB90010A661 /* CustomViewForTF.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +294,7 @@
 				TargetAttributes = {
 					CE5A07C32BBED9C60028BF74 = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 				};
 			};
@@ -221,7 +325,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE5A07FB2BBEF0610028BF74 /* bakucafes.json in Resources */,
+				CE5A07FB2BBEF0610028BF74 /* restaurantmock.json in Resources */,
 				CE5A07D42BBED9C70028BF74 /* LaunchScreen.storyboard in Resources */,
 				CE5A07D12BBED9C70028BF74 /* Assets.xcassets in Resources */,
 			);
@@ -235,12 +339,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE5A07CC2BBED9C60028BF74 /* MainViewController.swift in Sources */,
+				CE5A08042BBF1FE10028BF74 /* UITableViewCell+Ex.swift in Sources */,
+				FC9E3A202BC23E1A0010A661 /* AddNewCafeVM.swift in Sources */,
+				FC9E3A822BC2ABB90010A661 /* CustomViewForTF.swift in Sources */,
+				FC9E3A2A2BC25AF70010A661 /* SearchViewController.swift in Sources */,
+				CE5A07FE2BBF1A5B0028BF74 /* CafeListViewController.swift in Sources */,
 				CE5A07DE2BBEDE490028BF74 /* BaseViewController.swift in Sources */,
 				CE5A07DC2BBEDC6F0028BF74 /* Router.swift in Sources */,
 				CE5A07F72BBEEB090028BF74 /* CafeObject.swift in Sources */,
 				CE5A07F92BBEEBA40028BF74 /* DataBaseManager.swift in Sources */,
 				CE5A07C82BBED9C60028BF74 /* AppDelegate.swift in Sources */,
+				CE5A08002BBF1A890028BF74 /* CafeListVM.swift in Sources */,
+				CE5A08022BBF1F8C0028BF74 /* TitleSubtitleTableViewCell.swift in Sources */,
+				FC9E3A2C2BC25B190010A661 /* SearchVM.swift in Sources */,
+				FC9E3A1E2BC23DE50010A661 /* AddNewViewController.swift in Sources */,
+				FC9E3A1B2BC234600010A661 /* MainViewCustomButton.swift in Sources */,
+				FC9E3A2F2BC262DF0010A661 /* SearchViewControllerDelegate.swift in Sources */,
 				CE5A07F32BBEE83A0028BF74 /* MainViewVM.swift in Sources */,
+				FC9E3A182BC02DC00010A661 /* DetailsViewController.swift in Sources */,
+				FC9E3A162BC02D940010A661 /* DetailsVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +494,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V893D9G2H6;
@@ -395,6 +513,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hasanbayliveysal.CafeMap-Baku";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -405,6 +524,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V893D9G2H6;

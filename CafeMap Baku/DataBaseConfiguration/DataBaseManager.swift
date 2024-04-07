@@ -8,7 +8,14 @@
 import UIKit
 import RealmSwift
 
-class DataBaseManager {
+protocol DataBaseManagerProtocol {
+    func writeDataToRealm()
+    func loadDataFromRealm() -> [Cafe]
+    func updateDescription(with cafeName: String, and description: String)
+    func writeCustomCafeToRealm(with model: Cafe)
+}
+
+class DataBaseManager: DataBaseManagerProtocol {
     static var shared = DataBaseManager()
     private var realm : Realm?
     private init() {}
@@ -20,7 +27,7 @@ class DataBaseManager {
             print("Error initializing Realm: \(error)")
         }
         
-        if let path = Bundle.main.url(forResource: "bakucafes", withExtension: "json") { do {
+        if let path = Bundle.main.url(forResource: "restaurantmock", withExtension: "json") { do {
                 let data = try Data(contentsOf: path)
                 let cafes = try JSONDecoder().decode([Cafe].self, from: data)
             for cafe in cafes {
