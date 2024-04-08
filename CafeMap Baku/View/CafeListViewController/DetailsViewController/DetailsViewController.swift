@@ -71,7 +71,7 @@ class DetailsViewController: BaseViewController<DetailsVM> {
 extension DetailsViewController {
     private func configureViewItems() {
         setupConstraint()
-        var gestureRec = UITapGestureRecognizer(target: self, action: #selector(didTapEditButton))
+        let gestureRec = UITapGestureRecognizer(target: self, action: #selector(didTapEditButton))
         editLabel.isUserInteractionEnabled = true
         editLabel.addGestureRecognizer(gestureRec)
         [nameLabel,locationName,descLabel,visitButton,editLabel].forEach({

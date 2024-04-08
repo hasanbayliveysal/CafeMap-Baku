@@ -10,42 +10,33 @@ import MapKit
 
 class MapViewModel: NSObject {
     var didTapDetailDisclosure: ((String)->())? = nil
+    var didTapCafeAnnotation: ((CLLocation)->())? = nil
+    var regionAndAnnotaion: ((MKCoordinateRegion)->())? = nil
     func getCafesLocation() -> [Cafe] {
         return DataBaseManager.shared.loadDataFromRealm()
     }
-    
-    
-    func addAnnotationsToMap(to mapView: MKMapView) {
-        let cafes = getCafesLocation()
-        for cafe in cafes {
-            let annotation = MKPointAnnotation()
-            annotation.title = cafe.name
-            annotation.coordinate = CLLocationCoordinate2D(latitude: cafe.locationCoordinateLatitude, longitude: cafe.locationCoordinateLongitude)
-            mapView.addAnnotation(annotation)
-        }
+    func addAnnotationToMap(to mapView: MKMapView, with cafes: [Cafe]) {
+        LocationManager.shared.addAnnotationsToMap(to: mapView, with: cafes)
     }
     
     func zoomToFitAnnotations(in mapView: MKMapView) {
-        guard let annotations = mapView.annotations as? [MKPointAnnotation],
-              !annotations.isEmpty
-        else {
-            return
-        }
-        var zoomRect = MKMapRect.null
-        for annotation in annotations {
-            let annotationPoint = MKMapPoint(annotation.coordinate)
-            let pointRect = MKMapRect(x: annotationPoint.x, y: annotationPoint.y, width: 0, height: 0)
-            zoomRect = zoomRect.union(pointRect)
-        }
-        
-        mapView.setVisibleMapRect(zoomRect, edgePadding: UIEdgeInsets(top: 50, left: 50, bottom: 50, right: 50), animated: true)
+        LocationManager.shared.zoomToFitAnnotations(in: mapView)
     }
+    func updateLocation(locationManager: CLLocationManager, cafeLocation: CLLocation) {
+        LocationManager.shared.updateLocation(locationManager: locationManager, cafeLocation: cafeLocation)
+    }
+    
+    func getLocationName(from latitude: Double, and longitude: Double, completion: @escaping (String)->()) {
+        LocationManager.shared.reverseGeocode(from: latitude, and: longitude) { location in
+            completion(location)
+        }
+    }
+    
 }
 
 extension MapViewModel: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard annotation is MKPointAnnotation else { return nil }
-        
         let identifier = "cafeAnnotation"
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView
         annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
@@ -56,11 +47,10 @@ extension MapViewModel: MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, didSelect annotation: MKAnnotation) {
-        if let title = annotation.title {
-            print("\(String(describing: title))")
-        }
-        
+        let location = CLLocation(latitude: annotation.coordinate.latitude, longitude: annotation.coordinate.longitude)
+        didTapCafeAnnotation?(location)
     }
+
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         if control == view.rightCalloutAccessoryView {
@@ -69,4 +59,20 @@ extension MapViewModel: MKMapViewDelegate {
             }
         }
     }
+    
 }
+
+
+extension MapViewModel: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let userLocation = locations.last else { return }
+        let userCoordinate = userLocation.coordinate
+        let region = MKCoordinateRegion(center: userCoordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
+        regionAndAnnotaion?(region)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+            print("Location manager failed with error: \(error.localizedDescription)")
+    }
+}
+

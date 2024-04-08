@@ -12,9 +12,13 @@ class DetailsVM {
     init(){}
     
     func openCafeWebsite(with url :String, and vc: UIViewController) {
-        if let cafeURL = URL(string:url) {
-            let safariViewController = SFSafariViewController(url: cafeURL)
-            vc.present(safariViewController, animated: true, completion: nil)
+        if url.contains("https://") {
+            if let cafeURL = URL(string: url) {
+                let safariViewController = SFSafariViewController(url: cafeURL)
+                vc.present(safariViewController, animated: true, completion: nil)
+            }
+        } else {
+            AlertManager.shared.makeAlertAction(on: vc, with: "Cannot open the website, Error: BAD URL")
         }
     }
     

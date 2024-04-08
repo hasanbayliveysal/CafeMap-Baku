@@ -19,7 +19,7 @@ class DataBaseManager: DataBaseManagerProtocol {
     static var shared = DataBaseManager()
     private var realm : Realm?
     private init() {}
-//    MARK: - Write Data To Realm Database
+    //    MARK: - Write Data To Realm Database
     func writeDataToRealm() {
         do {
             realm = try Realm()
@@ -28,8 +28,8 @@ class DataBaseManager: DataBaseManagerProtocol {
         }
         
         if let path = Bundle.main.url(forResource: "restaurantmock", withExtension: "json") { do {
-                let data = try Data(contentsOf: path)
-                let cafes = try JSONDecoder().decode([Cafe].self, from: data)
+            let data = try Data(contentsOf: path)
+            let cafes = try JSONDecoder().decode([Cafe].self, from: data)
             for cafe in cafes {
                 let existingCafe = realm?.objects(Cafe.self).filter("name == %@", cafe.name).first
                 if existingCafe == nil {
@@ -40,12 +40,12 @@ class DataBaseManager: DataBaseManagerProtocol {
                         print("Cafes added to Realm successfully.")
                     }catch {
                         print("Error adding cafes to Realm: \(error)")
-                   }
+                    }
                 }
-              }
-            } catch {
-                print("Error reading JSON data: \(error)")
             }
+        } catch {
+            print("Error reading JSON data: \(error)")
+        }
         }else {
             print("JSON file not found.")
         }
@@ -78,10 +78,14 @@ class DataBaseManager: DataBaseManagerProtocol {
         }
         if let cafe = realm?.objects(Cafe.self).filter("name == %@", cafeName).first {
             do {
-                try realm?.write({
-                    cafe.desc = description
-                })
-                print("Cafe description updated successfully.")
+                if !description.isEmpty, cafe.desc != description  {
+                    try realm?.write({
+                        cafe.desc = description
+                    })
+                    print("Cafe description updated successfully.")
+                } else {
+                    print("There is no any changes")
+                }
             }catch {
                 print("Cafe not found.")
             }

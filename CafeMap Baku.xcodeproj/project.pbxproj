@@ -25,6 +25,8 @@
 		CE5A08042BBF1FE10028BF74 /* UITableViewCell+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A08032BBF1FE10028BF74 /* UITableViewCell+Ex.swift */; };
 		FC66AAC82BC2CFAA0076AE10 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC66AAC72BC2CFAA0076AE10 /* MapViewController.swift */; };
 		FC66AACA2BC2D12E0076AE10 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC66AAC92BC2D12E0076AE10 /* MapViewModel.swift */; };
+		FC66AAD62BC332F70076AE10 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC66AAD52BC332F70076AE10 /* LocationManager.swift */; };
+		FC66AADA2BC404120076AE10 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC66AAD92BC404120076AE10 /* AlertManager.swift */; };
 		FC9E3A162BC02D940010A661 /* DetailsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9E3A152BC02D940010A661 /* DetailsVM.swift */; };
 		FC9E3A182BC02DC00010A661 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9E3A172BC02DC00010A661 /* DetailsViewController.swift */; };
 		FC9E3A1B2BC234600010A661 /* MainViewCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9E3A1A2BC234600010A661 /* MainViewCustomButton.swift */; };
@@ -55,6 +57,8 @@
 		CE5A08032BBF1FE10028BF74 /* UITableViewCell+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Ex.swift"; sourceTree = "<group>"; };
 		FC66AAC72BC2CFAA0076AE10 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		FC66AAC92BC2D12E0076AE10 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		FC66AAD52BC332F70076AE10 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		FC66AAD92BC404120076AE10 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		FC9E3A152BC02D940010A661 /* DetailsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVM.swift; sourceTree = "<group>"; };
 		FC9E3A172BC02DC00010A661 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		FC9E3A1A2BC234600010A661 /* MainViewCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCustomButton.swift; sourceTree = "<group>"; };
@@ -99,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				FC9E3A192BC05BD90010A661 /* MockData */,
-				CE5A07F52BBEEAD90028BF74 /* DataBaseConfiguration */,
+				FC66AAD32BC332DC0076AE10 /* Manager */,
 				CE5A07E32BBEDEFF0028BF74 /* Model */,
 				CE5A07DF2BBEDEA80028BF74 /* View */,
 				CE5A07E22BBEDEF60028BF74 /* ViewModel */,
@@ -211,6 +215,32 @@
 				FC66AAC72BC2CFAA0076AE10 /* MapViewController.swift */,
 			);
 			path = MapViewController;
+			sourceTree = "<group>";
+		};
+		FC66AAD32BC332DC0076AE10 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				FC66AAD82BC403FA0076AE10 /* AlertManager */,
+				FC66AAD42BC332E60076AE10 /* LocationManager */,
+				CE5A07F52BBEEAD90028BF74 /* DataBaseConfiguration */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		FC66AAD42BC332E60076AE10 /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				FC66AAD52BC332F70076AE10 /* LocationManager.swift */,
+			);
+			path = LocationManager;
+			sourceTree = "<group>";
+		};
+		FC66AAD82BC403FA0076AE10 /* AlertManager */ = {
+			isa = PBXGroup;
+			children = (
+				FC66AAD92BC404120076AE10 /* AlertManager.swift */,
+			);
+			path = AlertManager;
 			sourceTree = "<group>";
 		};
 		FC9E3A142BC02D770010A661 /* DetailsViewController */ = {
@@ -359,6 +389,8 @@
 				FC9E3A2A2BC25AF70010A661 /* SearchViewController.swift in Sources */,
 				CE5A07FE2BBF1A5B0028BF74 /* CafeListViewController.swift in Sources */,
 				CE5A07DE2BBEDE490028BF74 /* BaseViewController.swift in Sources */,
+				FC66AAD62BC332F70076AE10 /* LocationManager.swift in Sources */,
+				FC66AADA2BC404120076AE10 /* AlertManager.swift in Sources */,
 				CE5A07DC2BBEDC6F0028BF74 /* Router.swift in Sources */,
 				CE5A07F72BBEEB090028BF74 /* CafeObject.swift in Sources */,
 				CE5A07F92BBEEBA40028BF74 /* DataBaseManager.swift in Sources */,
@@ -395,6 +427,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -455,6 +488,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

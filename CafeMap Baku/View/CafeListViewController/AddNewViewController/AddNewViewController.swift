@@ -9,7 +9,7 @@ import UIKit
 import MapKit
 
 class AddNewViewController: BaseViewController<AddNewCafeVM> {
-    private var cafeLocationCoordinate: CLLocationCoordinate2D? = nil
+    var cafeLocationCoordinate: CLLocationCoordinate2D? = nil
     private var nameTextFieldView: CustomTextFieldView = {
         var view = CustomTextFieldView()
         view.customTF.placeholder = "Restaurant name"
@@ -22,10 +22,10 @@ class AddNewViewController: BaseViewController<AddNewCafeVM> {
     }()
     private var webSiteTextFieldView: CustomTextFieldView = {
         var view = CustomTextFieldView()
-        view.customTF.placeholder = "Website URL"
+        view.customTF.placeholder = "Website URL (If restaurant has)"
         return view
     }()
-    private var locationTextFieldView: CustomTextFieldView = {
+    var locationTextFieldView: CustomTextFieldView = {
         var view = CustomTextFieldView()
         view.customTF.placeholder = "Restaurant location"
         view.customTF.addTarget(self, action: #selector(didTapLocationTF), for: .allEditingEvents )
@@ -54,8 +54,6 @@ class AddNewViewController: BaseViewController<AddNewCafeVM> {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("fsafas")
-     
     }
     
 }
@@ -88,11 +86,14 @@ extension AddNewViewController {
     func didTapSaveButton() {
         guard let name = nameTextFieldView.customTF.text, !name.isEmpty,
               let description = descTextFieldView.customTF.text, !description.isEmpty,
-              let websiteUrl = webSiteTextFieldView.customTF.text, !websiteUrl.isEmpty,
               let locationName = locationTextFieldView.customTF.text, !locationName.isEmpty,
               let locationCoordinate = cafeLocationCoordinate
         else {
             return
+        }
+        var websiteUrl: String? = nil
+        if let url = webSiteTextFieldView.customTF.text, !url.isEmpty {
+            websiteUrl = url
         }
         let myItem = Cafe(
             name: name,
