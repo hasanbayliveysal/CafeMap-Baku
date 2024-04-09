@@ -11,7 +11,7 @@ import MapKit
 class MapViewModel: NSObject {
     var didTapDetailDisclosure: ((String)->())? = nil
     var didTapCafeAnnotation: ((CLLocation, MKAnnotation)->())? = nil
-    var regionAndAnnotaion: ((MKCoordinateRegion)->())? = nil
+    var didUpdateLocations: ((MKCoordinateRegion)->())? = nil
     func getCafesLocation() -> [Cafe] {
         return DataBaseManager.shared.loadDataFromRealm()
     }
@@ -54,7 +54,7 @@ extension MapViewModel: MKMapViewDelegate {
         let location = CLLocation(latitude: annotation.coordinate.latitude, longitude: annotation.coordinate.longitude)
         didTapCafeAnnotation?(location, annotation)
     }
-
+    
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         if control == view.rightCalloutAccessoryView {
@@ -73,11 +73,11 @@ extension MapViewModel: CLLocationManagerDelegate {
         guard let userLocation = locations.last else { return }
         let userCoordinate = userLocation.coordinate
         let region = MKCoordinateRegion(center: userCoordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
-        regionAndAnnotaion?(region)
+        didUpdateLocations?(region)
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-            print("Location manager failed with error: \(error.localizedDescription)")
+        print("Location manager failed with error: \(error.localizedDescription)")
     }
 }
 

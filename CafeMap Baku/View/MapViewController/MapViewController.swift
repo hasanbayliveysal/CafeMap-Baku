@@ -24,6 +24,8 @@ class MapViewController: BaseViewController<MapViewModel> {
         super.viewDidLoad()
         configureUIElements()
         configureGestureRecognizer()
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
     }
     private var userLocationButton: UIImageView = {
         var button = UIImageView()
@@ -60,7 +62,7 @@ extension MapViewController {
         vm.didTapDetailDisclosure = { [weak self] title in
             self?.pushDetailsViewController(with: title)
         }
-        vm.regionAndAnnotaion = {[weak self] region in
+        vm.didUpdateLocations = {[weak self] region in
             self?.userLocation = region
             self?.mapView.showsUserLocation = true
             self?.vm.zoomToFitAnnotations(in: self?.mapView ?? MKMapView())
@@ -70,7 +72,7 @@ extension MapViewController {
         }
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapUserLocationButton))
         userLocationButton.addGestureRecognizer(tapGesture)
-       
+        
     }
     private func getDistance(location: CLLocation, annotation: MKAnnotation) -> String {
         self.location = location
@@ -108,6 +110,9 @@ extension MapViewController {
     @objc
     func tracingUserLocation() {
         vm.requestLocation(locationManager: locationManager)
+        if let userLocation {
+            mapView.setRegion(userLocation, animated: true)
+        }
     }
     
     private func configureGestureRecognizer() {
