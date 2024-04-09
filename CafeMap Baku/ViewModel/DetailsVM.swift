@@ -18,7 +18,7 @@ class DetailsVM {
                 vc.present(safariViewController, animated: true, completion: nil)
             }
         } else {
-            AlertManager.shared.makeAlertAction(on: vc, with: "Cannot open the website, Error: BAD URL")
+            AlertManager.shared.makeAlertAction(on: vc, with: "Cannot open the website, Error: BAD URL", and: nil)
         }
     }
     

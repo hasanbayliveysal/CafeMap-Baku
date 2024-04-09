@@ -10,7 +10,7 @@ import MapKit
 
 class MapViewModel: NSObject {
     var didTapDetailDisclosure: ((String)->())? = nil
-    var didTapCafeAnnotation: ((CLLocation)->())? = nil
+    var didTapCafeAnnotation: ((CLLocation, MKAnnotation)->())? = nil
     var regionAndAnnotaion: ((MKCoordinateRegion)->())? = nil
     func getCafesLocation() -> [Cafe] {
         return DataBaseManager.shared.loadDataFromRealm()
@@ -22,14 +22,18 @@ class MapViewModel: NSObject {
     func zoomToFitAnnotations(in mapView: MKMapView) {
         LocationManager.shared.zoomToFitAnnotations(in: mapView)
     }
-    func updateLocation(locationManager: CLLocationManager, cafeLocation: CLLocation) {
-        LocationManager.shared.updateLocation(locationManager: locationManager, cafeLocation: cafeLocation)
+    func requestLocation(locationManager: CLLocationManager) {
+        LocationManager.shared.updateLocation(locationManager: locationManager)
     }
     
     func getLocationName(from latitude: Double, and longitude: Double, completion: @escaping (String)->()) {
         LocationManager.shared.reverseGeocode(from: latitude, and: longitude) { location in
             completion(location)
         }
+    }
+    
+    func getDistanceBetweenUserAndCafe(with mapView: MKMapView, and cafeLocation: CLLocation) -> String {
+        return LocationManager.shared.getDistanceBetweenUserAndCafe(with: mapView, and: cafeLocation)
     }
     
 }
@@ -48,7 +52,7 @@ extension MapViewModel: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, didSelect annotation: MKAnnotation) {
         let location = CLLocation(latitude: annotation.coordinate.latitude, longitude: annotation.coordinate.longitude)
-        didTapCafeAnnotation?(location)
+        didTapCafeAnnotation?(location, annotation)
     }
 
     
@@ -64,6 +68,7 @@ extension MapViewModel: MKMapViewDelegate {
 
 
 extension MapViewModel: CLLocationManagerDelegate {
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let userLocation = locations.last else { return }
         let userCoordinate = userLocation.coordinate

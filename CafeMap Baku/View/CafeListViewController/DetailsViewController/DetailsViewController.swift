@@ -6,12 +6,13 @@
 //
 
 import UIKit
-import WebKitPlus
 import SafariServices
 
 class DetailsViewController: BaseViewController<DetailsVM> {
     private var websiteUrl: String? = nil
+    var distance: String? = nil
     var cafeItem: Cafe? = nil
+    var cafeName: String? = nil
     private var descLabel: UITextField = {
         var label = UITextField()
         label.layer.borderColor = UIColor.red.cgColor
@@ -26,6 +27,7 @@ class DetailsViewController: BaseViewController<DetailsVM> {
         var label = UILabel()
         label.layer.borderColor = UIColor.red.cgColor
         label.layer.borderWidth = 2
+        label.numberOfLines = 0
         label.layer.cornerRadius = 16
         label.textAlignment = .center
         return label
@@ -50,7 +52,7 @@ class DetailsViewController: BaseViewController<DetailsVM> {
     }()
     private var editLabel: UILabel = {
         let label = UILabel()
-        label.text = "edit"
+        label.text = "edit description"
         label.textColor = .systemBlue
         label.textAlignment = .right
         return label
@@ -90,7 +92,12 @@ extension DetailsViewController {
         guard let cafeItem else {
             return
         }
-        nameLabel.text = cafeItem.name
+        cafeName = cafeItem.name
+        if let distance {
+            nameLabel.text = "Restaurant: \(cafeItem.name) \n \(distance)"
+        } else {
+            nameLabel.text = "Restaurant: \(cafeItem.name)"
+        }
         descLabel.text = cafeItem.desc
         locationName.text = cafeItem.locationName
         websiteUrl = cafeItem.websiteUrl
@@ -111,25 +118,31 @@ extension DetailsViewController {
     @objc
     func didTapEditButton() {
         switch editLabel.text {
-        case "edit":
+        case "edit description":
             descLabel.isUserInteractionEnabled = true
             descLabel.becomeFirstResponder()
             editLabel.text = "save changes"
         case "save changes":
-            descLabel.isUserInteractionEnabled = false
-            descLabel.resignFirstResponder()
-            guard let name = nameLabel.text, !name.isEmpty,
+            guard let name = cafeName, !name.isEmpty,
                   let desc = descLabel.text, !desc.isEmpty
             else {
+                descLabel.becomeFirstResponder()
+                emptyDescriptionAlert(title: "It cannot be empty, please write something")
                 return
             }
+            descLabel.isUserInteractionEnabled = false
+            descLabel.resignFirstResponder()
             vm.updateData(with: name, and: desc)
-            editLabel.text = "edit"
+            editLabel.text = "edit description"
         default :
             break
         }
        
         
+    }
+    
+    private func emptyDescriptionAlert(title: String) {
+        AlertManager.shared.makeAlertAction(on: self, with: title, and: nil)
     }
 }
 

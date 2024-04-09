@@ -7,7 +7,7 @@
 
 import UIKit
 class CafeListVM: NSObject{
-   
+    private var animatedIndexPaths = Set<IndexPath>()
     func writeData() {
         DataBaseManager.shared.writeDataToRealm()
     }
@@ -24,6 +24,14 @@ extension CafeListVM: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TitleSubtitleTableViewCell.identifier, for: indexPath) as! TitleSubtitleTableViewCell
+        cell.alpha = 0
+        if !animatedIndexPaths.contains(indexPath) {
+            cell.alpha = 0
+            UIView.animate(withDuration: 1) {
+                cell.alpha = 1
+            }
+            animatedIndexPaths.insert(indexPath)
+        }
         cell.configureWihtRestaurant(with: fetchData()[indexPath.row])
         return cell
     }

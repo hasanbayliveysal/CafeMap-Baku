@@ -2,17 +2,17 @@
 [
     {
         "name": "McDonald's 28 Mall",
-        "locationName": "27 Azadliq Ave, Baku 1000, Azerbaijan",
-        "locationCoordinateLatitude": 40.3740359,
-        "locationCoordinateLongitude": 49.8290512,
+        "locationName": "1014, Azadlig avenu 15a/4 Baku AZ, Bakı",
+        "locationCoordinateLatitude": 40.3790665,
+        "locationCoordinateLongitude": 49.8418990,
         "desc": "Biz keyfiyyətə sadiq qalırıq",
         "websiteUrl": "https://mcdonalds.az/"
     },
     {
         "name": "Papa John's Əhmədli",
         "locationName": "106 Məhəmməd Hadi küçəsi, Baku 1001",
-        "locationCoordinateLatitude": 40.3893116,
-        "locationCoordinateLongitude": 49.8008714,
+        "locationCoordinateLatitude": 40.3902026,
+        "locationCoordinateLongitude": 49.9471946,
         "desc": "Klasik ve özel pizzalar",
         "websiteUrl": "https://www.papajohns.az/az/"
     },
@@ -36,7 +36,190 @@
         "locationCoordinateLatitude": 40.414278,
         "locationCoordinateLongitude": 49.948673,
         "desc": "Milli və türk mətbəxi"
+    },
+    {
+        "name": "AGORA CLUB RESTAURANT & WINE BAR",
+        "locationName": "87 Neftchilar Ave, Baku, Azerbaijan",
+        "locationCoordinateLatitude": 40.364583,
+        "locationCoordinateLongitude": 49.835619,
+        "desc": "Aralıq dənizi mətbəxi "
+    },
+    {
+        "name": "McDonald’s (Dəniz Mall)",
+        "locationName": "26a Neftchilar Ave, Baku, Azerbaijan",
+        "locationCoordinateLatitude": 40.3580532,
+        "locationCoordinateLongitude": 49.8347311,
+        "desc": "Biz keyfiyyətə sadiq qalırıq",
+        "websiteUrl": "https://mcdonalds.az/"
+    },
+    {
+        "name": "McDonald's Fountains Square",
+        "locationName": "340 Nizami St, Baku 1005, Azerbaijan",
+        "locationCoordinateLatitude": 40.3717654,
+        "locationCoordinateLongitude": 49.8351289,
+        "desc": "Biz keyfiyyətə sadiq qalırıq",
+        "websiteUrl": "https://mcdonalds.az/"
+    },
+    {
+        "name": "McDonald's Sahil",
+        "locationName": "Uzeyir Hajibeyov St, Baku, Azerbaijan",
+        "locationCoordinateLatitude": 40.3716279,
+        "locationCoordinateLongitude": 49.8392375,
+        "desc": "Biz keyfiyyətə sadiq qalırıq",
+        "websiteUrl": "https://mcdonalds.az/"
+    },
+    {
+        "name": "McDonald's Park Bulvar",
+        "locationName": "Neftchilar Avenue Park Bulvar Mall",
+        "locationCoordinateLatitude": 40.3707445,
+        "locationCoordinateLongitude": 49.8471245,
+        "desc": "Biz keyfiyyətə sadiq qalırıq",
+        "websiteUrl": "https://mcdonalds.az/"
+    },
+    {
+        "name": "McDonald's Memar Əcəmi",
+        "locationName": "Məmməd Cəfər Cəfərov, Bakı, Azerbaijan",
+        "locationCoordinateLatitude": 40.4105941,
+        "locationCoordinateLongitude": 49.8110481,
+        "desc": "Biz keyfiyyətə sadiq qalırıq",
+        "websiteUrl": "https://mcdonalds.az/"
+    },
+    {
+        "name": "KFC (Koroğlu Rəhimov)",
+        "locationName": "22 A Koroğlu Rəhimov küçəsi, Bakı, Azerbaijan",
+        "locationCoordinateLatitude": 40.398952,
+        "locationCoordinateLongitude": 49.854434,
+        "desc": "Çıtır Tavuk Kanatları",
+        "websiteUrl": "https://www.kfc-az.com/"
+    },
+    {
+        "name": "KFC Atatürk parkı",
+        "locationName": "Ataturk avenue, Baku, Azerbaijan",
+        "locationCoordinateLatitude": 40.411979,
+        "locationCoordinateLongitude": 49.84352,
+        "desc": "Çıtır Tavuk Kanatları",
+        "websiteUrl": "https://www.kfc-az.com/"
+    },
+    {
+        "name": "KFC Inshaatchilar",
+        "locationName": "281a Abbas Mirza Sharifzadeh St, Baku, Azerbaijan",
+        "locationCoordinateLatitude": 40.3826341,
+        "locationCoordinateLongitude": 49.792879,
+        "desc": "Çıtır Tavuk Kanatları",
+        "websiteUrl": "https://www.kfc-az.com/"
+    },
+    {
+        "name": "KFC 28 Mall",
+        "locationName": "15a Azadliq Ave, Baku, Azerbaijan",
+        "locationCoordinateLatitude": 40.3790665,
+        "locationCoordinateLongitude": 49.8418945,
+        "desc": "Çıtır Tavuk Kanatları",
+        "websiteUrl": "https://www.kfc-az.com/"
+    },
+    {
+        "name": "KFC Daniz Mall",
+        "locationName": "26a Neftchilar Ave, Baku, Azerbaijan",
+        "locationCoordinateLatitude": 40.358646,
+        "locationCoordinateLongitude": 49.837682,
+        "desc": "Çıtır Tavuk Kanatları",
+        "websiteUrl": "https://www.kfc-az.com/"
+    },
+    {
+        "name": "Papa Johns İnşaatçılar",
+        "locationName": "Abbas Mirzə Şərifzadə, Baku 1067, Azerbaijan",
+        "locationCoordinateLatitude": 40.3893116,
+        "locationCoordinateLongitude": 49.8008714,
+        "desc": "Klasik ve özel pizzalar",
+        "websiteUrl": "https://www.papajohns.az/az/"
+    },
+    {
+        "name": "Anadolu",
+        "locationName": "5 Alexander Pushkin, Baku, Azerbaijan",
+        "locationCoordinateLatitude": 40.375611,
+        "locationCoordinateLongitude": 49.853742,
+        "desc": "Yeməklərin evlərə və iş yerlərinə çatdırılması"
+    },
+    {
+        "name": "BAKINSKIY DOMIK",
+        "locationName": "Nəsimi r-nu, Bəşir Səfəroğlu 217",
+        "locationCoordinateLatitude": 40.376058,
+        "locationCoordinateLongitude": 49.843645,
+        "desc": "Canlı musiqi və dadlı yeməklər "
+    },
+    {
+        "name": "BAKU BAY BANQUET HALL",
+        "locationName": "Bayıl qəs., Xanlar 38",
+        "locationCoordinateLatitude": 40.347946,
+        "locationCoordinateLongitude": 49.8348,
+        "desc": "Nişan və ad günləri üçün ideal məkan."
+    },
+    {
+        "name": "BAKU VOICE ROOMS",
+        "locationName": "Nərimanov r-nu, Koroğlu Rəhimov 17",
+        "locationCoordinateLatitude": 40.397026,
+        "locationCoordinateLongitude": 49.85943,
+        "desc": "Səmimi görüşlərin, xoş söhbətlərin məkanı"
+    },
+    {
+        "name": "Shaurma N1 Park Bulvar",
+        "locationName": "135 Neftçilər Prospekti, Bakı",
+        "locationCoordinateLatitude": 40.3707445,
+        "locationCoordinateLongitude": 49.8471245,
+        "desc": "Ən dadlı shaurma",
+        "websiteUrl": "https://shaurma.az/"
+    },
+    {
+        "name": "Shaurma N1 Ajami",
+        "locationName": "Nəsimi rayonu, Cavadxan küçəsi 3 MKR",
+        "locationCoordinateLatitude": 40.409647,
+        "locationCoordinateLongitude": 49.813824,
+        "desc": "Ən dadlı shaurma",
+        "websiteUrl": "https://shaurma.az/"
+    },
+    {
+        "name": "BARIN RESTAURANT",
+        "locationName": "Nəsimi r-nu, Səməd Vurğun 26",
+        "locationCoordinateLatitude": 40.37544,
+        "locationCoordinateLongitude": 49.84083,
+        "desc": "Rus Mətbəxti"
+    },
+    {
+        "name": "BEER HALL",
+        "locationName": "Səbail r-nu, Aqil Quliyev 11",
+        "locationCoordinateLatitude": 40.34524,
+        "locationCoordinateLongitude": 49.840983,
+        "desc": "Bakıda ən yaxşı pivə "
+    },
+    {
+        "name": "CENTRAL BAKU",
+        "locationName": "Səbail r-nu, Nizami küç. 75 A",
+        "locationCoordinateLatitude": 40.372458,
+        "locationCoordinateLongitude": 49.838652,
+        "desc": "Biz dünya zövqü ilə xatirələrə xidmət edirik! "
+    },
+    {
+        "name": "CHAKIRBEYLI RESTAURANT",
+        "locationName": "Xətai r-nu, Xudu Məmmədov 41",
+        "locationCoordinateLatitude": 40.371512,
+        "locationCoordinateLongitude": 49.954714,
+        "desc": "Türk mətbəxi "
+    },
+    {
+        "name": "EMILAND HALL",
+        "locationName": "Nəsimi r-nu, Füzuli küç. 49",
+        "locationCoordinateLatitude": 40.377558,
+        "locationCoordinateLongitude": 49.838671,
+        "desc": "Bayramlarınız Emiland Hall-dan başlayır "
+    },
+    {
+        "name": "GOURMET",
+        "locationName": "Nəsimi r-nu, Cəlil Məmmədquluzadə 118",
+        "locationCoordinateLatitude": 40.397116,
+        "locationCoordinateLongitude": 49.827424,
+        "desc": "Nahar üçün tək alternativ vardır, o da Gourmet! "
     }
+    
+    
 ]
 
 

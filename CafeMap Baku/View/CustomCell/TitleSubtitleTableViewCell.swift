@@ -17,6 +17,7 @@ class TitleSubtitleTableViewCell: UITableViewCell {
     private var locationLabel: UILabel = {
         var label = UILabel()
         label.textColor = UIColor.black.withAlphaComponent(0.5)
+        label.numberOfLines = 0
         label.font = UIFont.systemFont(ofSize: 12, weight: .medium)
         return label
     }()
@@ -54,6 +55,7 @@ class TitleSubtitleTableViewCell: UITableViewCell {
         labelsStackView.snp.makeConstraints { make in
             make.centerY.equalTo(snp.centerY)
             make.left.equalTo(snp.left).offset(16)
+            make.right.equalTo(snp.right).offset(-16)
             make.top.bottom.equalToSuperview().inset(8)
         }
     }

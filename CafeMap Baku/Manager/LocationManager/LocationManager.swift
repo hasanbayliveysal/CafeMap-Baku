@@ -10,7 +10,7 @@ import CoreLocation
 import MapKit
 
 protocol LocationManagerProtocol {
-    func updateLocation(locationManager: CLLocationManager, cafeLocation: CLLocation)
+    func updateLocation(locationManager: CLLocationManager)
     func addAnnotationsToMap(to mapView: MKMapView, with cafes: [Cafe])
     func zoomToFitAnnotations(in mapView: MKMapView)
     func reverseGeocode(from latitude: Double, and longitude: Double, completion: @escaping (String)->())
@@ -19,7 +19,6 @@ protocol LocationManagerProtocol {
 class LocationManager: LocationManagerProtocol {
 
     static let shared = LocationManager()
-    private var distance: ((String)->())? = nil
     private let geocoder = CLGeocoder()
     
     func getDistanceBetweenUserAndCafe(with mapView: MKMapView, and cafeLocation: CLLocation) -> String {
@@ -28,13 +27,8 @@ class LocationManager: LocationManagerProtocol {
         return String(format: "%.2f km", distanceInMeters/1000.0)
     }
     
-    func updateLocation(locationManager: CLLocationManager, cafeLocation: CLLocation) {
+    func updateLocation(locationManager: CLLocationManager) {
         locationManager.requestLocation()
-        guard let userLocation = locationManager.location else { return }
-        let distanceInMeters = userLocation.distance(from: cafeLocation)
-        let formattedDistance = String(format: "%.2f", distanceInMeters/1000.0)
-        distance?(formattedDistance)
-        print("Distance to cafe: \(formattedDistance) km")
     }
     
     func addAnnotationsToMap(to mapView: MKMapView, with cafes: [Cafe]) {
@@ -63,13 +57,13 @@ class LocationManager: LocationManagerProtocol {
     }
     
     func reverseGeocode(from latitude: Double, and longitude: Double, completion: @escaping (String)->()) {
-            let location = CLLocation(latitude: latitude, longitude: longitude)
-            geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
-                guard error == nil, let placemark = placemarks?.first else {
-                    print("Reverse geocoding error: \(error?.localizedDescription ?? "")")
-                    return
-                }
-                completion((placemark.name ?? "") + ", " + (placemark.locality ?? ""))
+        let location = CLLocation(latitude: latitude, longitude: longitude)
+        geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
+            guard error == nil, let placemark = placemarks?.first else {
+                print("Reverse geocoding error: \(error?.localizedDescription ?? "")")
+                return
             }
+            completion((placemark.name ?? "") + ", " + (placemark.locality ?? ""))
         }
+    }
 }

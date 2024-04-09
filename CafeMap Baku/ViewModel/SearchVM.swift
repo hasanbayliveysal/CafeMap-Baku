@@ -12,6 +12,7 @@ import MapKit
 class SearchVM: NSObject {
     var reloadTableViewClosure: (() -> ())?
     var didSelectLocation: ((String, CLLocationCoordinate2D)->())?
+    private var animatedIndexPaths = Set<IndexPath>()
     var searchResults: [MKMapItem] = []{
         didSet {
             self.reloadTableViewClosure?()
@@ -61,6 +62,13 @@ extension SearchVM: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TitleSubtitleTableViewCell.identifier, for: indexPath) as! TitleSubtitleTableViewCell
         let item = searchResults[indexPath.row]
+        if !animatedIndexPaths.contains(indexPath) {
+            cell.alpha = 0
+            UIView.animate(withDuration: 1) {
+                cell.alpha = 1
+            }
+            animatedIndexPaths.insert(indexPath)
+        }
         cell.configureWihtSearchItems(with: item)
         return cell
     }

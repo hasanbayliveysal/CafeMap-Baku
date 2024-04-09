@@ -27,6 +27,7 @@
 		FC66AACA2BC2D12E0076AE10 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC66AAC92BC2D12E0076AE10 /* MapViewModel.swift */; };
 		FC66AAD62BC332F70076AE10 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC66AAD52BC332F70076AE10 /* LocationManager.swift */; };
 		FC66AADA2BC404120076AE10 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC66AAD92BC404120076AE10 /* AlertManager.swift */; };
+		FC66AADF2BC525BA0076AE10 /* BottomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC66AADE2BC525BA0076AE10 /* BottomAlertView.swift */; };
 		FC9E3A162BC02D940010A661 /* DetailsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9E3A152BC02D940010A661 /* DetailsVM.swift */; };
 		FC9E3A182BC02DC00010A661 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9E3A172BC02DC00010A661 /* DetailsViewController.swift */; };
 		FC9E3A1B2BC234600010A661 /* MainViewCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9E3A1A2BC234600010A661 /* MainViewCustomButton.swift */; };
@@ -59,6 +60,7 @@
 		FC66AAC92BC2D12E0076AE10 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		FC66AAD52BC332F70076AE10 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		FC66AAD92BC404120076AE10 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		FC66AADE2BC525BA0076AE10 /* BottomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomAlertView.swift; sourceTree = "<group>"; };
 		FC9E3A152BC02D940010A661 /* DetailsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVM.swift; sourceTree = "<group>"; };
 		FC9E3A172BC02DC00010A661 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		FC9E3A1A2BC234600010A661 /* MainViewCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCustomButton.swift; sourceTree = "<group>"; };
@@ -102,7 +104,6 @@
 		CE5A07C62BBED9C60028BF74 /* CafeMap Baku */ = {
 			isa = PBXGroup;
 			children = (
-				FC9E3A192BC05BD90010A661 /* MockData */,
 				FC66AAD32BC332DC0076AE10 /* Manager */,
 				CE5A07E32BBEDEFF0028BF74 /* Model */,
 				CE5A07DF2BBEDEA80028BF74 /* View */,
@@ -110,6 +111,7 @@
 				CE5A07E42BBEDF170028BF74 /* Extensions */,
 				CE5A07E12BBEDEE60028BF74 /* Router */,
 				CE5A07E52BBEDF300028BF74 /* AppDelegate */,
+				FC9E3A192BC05BD90010A661 /* MockData */,
 				CE5A07D02BBED9C70028BF74 /* Assets.xcassets */,
 				CE5A07D22BBED9C70028BF74 /* LaunchScreen.storyboard */,
 				CE5A07D52BBED9C70028BF74 /* Info.plist */,
@@ -162,6 +164,7 @@
 		CE5A07E32BBEDEFF0028BF74 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CE5A07F62BBEEB090028BF74 /* CafeObject.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -193,7 +196,6 @@
 		CE5A07F52BBEEAD90028BF74 /* DataBaseConfiguration */ = {
 			isa = PBXGroup;
 			children = (
-				CE5A07F62BBEEB090028BF74 /* CafeObject.swift */,
 				CE5A07F82BBEEBA40028BF74 /* DataBaseManager.swift */,
 			);
 			path = DataBaseConfiguration;
@@ -213,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				FC66AAC72BC2CFAA0076AE10 /* MapViewController.swift */,
+				FC66AADD2BC525990076AE10 /* CustomView */,
 			);
 			path = MapViewController;
 			sourceTree = "<group>";
@@ -241,6 +244,14 @@
 				FC66AAD92BC404120076AE10 /* AlertManager.swift */,
 			);
 			path = AlertManager;
+			sourceTree = "<group>";
+		};
+		FC66AADD2BC525990076AE10 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				FC66AADE2BC525BA0076AE10 /* BottomAlertView.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 		FC9E3A142BC02D770010A661 /* DetailsViewController */ = {
@@ -398,6 +409,7 @@
 				CE5A08002BBF1A890028BF74 /* CafeListVM.swift in Sources */,
 				CE5A08022BBF1F8C0028BF74 /* TitleSubtitleTableViewCell.swift in Sources */,
 				FC66AAC82BC2CFAA0076AE10 /* MapViewController.swift in Sources */,
+				FC66AADF2BC525BA0076AE10 /* BottomAlertView.swift in Sources */,
 				FC9E3A2C2BC25B190010A661 /* SearchVM.swift in Sources */,
 				FC9E3A1E2BC23DE50010A661 /* AddNewViewController.swift in Sources */,
 				FC9E3A1B2BC234600010A661 /* MainViewCustomButton.swift in Sources */,
@@ -550,6 +562,7 @@
 				DEVELOPMENT_TEAM = V893D9G2H6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CafeMap Baku/Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need to access your location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -560,7 +573,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hasanbayliveysal.CafeMap-Baku";
+				PRODUCT_BUNDLE_IDENTIFIER = "VeysalHasanbayli.CafeMap-Baku";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -580,6 +593,7 @@
 				DEVELOPMENT_TEAM = V893D9G2H6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CafeMap Baku/Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need to access your location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -590,7 +604,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hasanbayliveysal.CafeMap-Baku";
+				PRODUCT_BUNDLE_IDENTIFIER = "VeysalHasanbayli.CafeMap-Baku";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
